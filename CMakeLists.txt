@@ -38,7 +38,7 @@ add_compile_options($<$<COMPILE_LANGUAGE:ASM>:-x$<SEMICOLON>assembler-with-cpp>)
 if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
     message(STATUS "Maximum optimization for speed")
     add_compile_options(-Ofast)
-elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo")
+elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebsInfo")
     message(STATUS "Maximum optimization for speed, debug info included")
     add_compile_options(-Ofast -g)
 elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
@@ -49,11 +49,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(HARDWARE/MATRIX_KEY USER/Matrix_key Core/Inc USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include)
+include_directories(HARDWARE/OLED/oled_test HARDWARE/SPI/SPI2 HARDWARE/OLED/oled_91 HARDWARE/MATRIX_KEY USER/Oled USER/Matrix_key Core/Inc USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "USB_DEVICE/*.*" "Drivers/*.*" "USER/*.*" "HARDWARE/MATRIX_KEY/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "USB_DEVICE/*.*" "Drivers/*.*" "USER/*.*" "HARDWARE/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407ZGTX_FLASH.ld)
 
@@ -61,7 +61,7 @@ add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR
 add_link_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)
 add_link_options(-T ${LINKER_SCRIPT})
 
-add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
+add_executable(multi.elf ${SOURCES} ${LINKER_SCRIPT})
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)

@@ -3,7 +3,7 @@
 * @email: colorful_ilx1@163.com
 * @date: 2023/8/20 10:56
 * @version: 1.0
-* @description: 
+* @description: ¾ØÕó¼üÅÌÇý¶¯´úÂë
 ********************************************************************************/
 
 
@@ -15,17 +15,19 @@
 
 #define STATE 0xffff
 
-#define ROW_GPIO GPIOE
-#define COL_GPIO GPIOG
+#define ROW_GPIO GPIOF
+#define COL_GPIO GPIOD
+#define ENABLE_ROW_RCC __HAL_RCC_GPIOF_CLK_ENABLE()
+#define ENABLE_COL_RCC __HAL_RCC_GPIOD_CLK_ENABLE()
 
-#define ROW4_PIN GPIO_PIN_2
-#define ROW3_PIN GPIO_PIN_3
-#define ROW2_PIN GPIO_PIN_5
-#define ROW1_PIN GPIO_PIN_6
+#define ROW4_PIN GPIO_PIN_3
+#define ROW3_PIN GPIO_PIN_2
+#define ROW2_PIN GPIO_PIN_1
+#define ROW1_PIN GPIO_PIN_0
 
-#define COL4_PIN GPIO_PIN_11
-#define COL3_PIN GPIO_PIN_12
-#define COL2_PIN GPIO_PIN_13
+#define COL4_PIN GPIO_PIN_10
+#define COL3_PIN GPIO_PIN_9
+#define COL2_PIN GPIO_PIN_8
 #define COL1_PIN GPIO_PIN_14
 
 #define SET_ROW1_HIGH HAL_GPIO_WritePin(ROW_GPIO, ROW1_PIN, GPIO_PIN_SET)

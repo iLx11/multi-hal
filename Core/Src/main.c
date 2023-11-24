@@ -21,10 +21,13 @@
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
+#include "stm32f4xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "retarget.h"
+#include "matrix_key_user.h"
+#include "oled_user.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,14 +92,16 @@ int main(void) {
     MX_USB_DEVICE_Init();
     MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
-
+    key_init_user();
+    oled_init_user();
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
+        key_scan_user();
         /* USER CODE END WHILE */
-
+        oled_show_user();
         /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */
