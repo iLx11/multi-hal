@@ -9,7 +9,6 @@
 
 #include "oled_91.h"
 #include "spi2.h"
-#include "stm32f4xx_hal_rcc.h"
 
 // 显示数据,128 * 32,4 -> (32 / 8)
 uint8_t oled_page[PAGE_WIDTH][PAGE_NUM];
@@ -30,7 +29,7 @@ void oled_91_init(void) {
     __HAL_RCC_GPIOB_CLK_ENABLE();
 
     //GPIO初始化设置
-    GPIO_InitStruct.Pin = GPIO_PIN_13 | GPIO_PIN_15;
+    GPIO_InitStruct.Pin = GPIO_PIN_10 | GPIO_PIN_15;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     GPIO_InitStruct.Pull = GPIO_PULLUP;//上拉
@@ -160,7 +159,8 @@ void oled_wt_byte(uint8_t data, uint8_t cmd, uint8_t index) {
 #else
     // 硬件 SPI
     // 发送数据
-    spi2_transmit_receive_byte(data);
+//    spi2_transmit_receive_byte(data);
+    spi2_read_write_byte(data);
 #endif
     // 失能片选
     DISABLE_OLED_91_CS(spi_device_cs_array[index].gpio_port, spi_device_cs_array[index].gpio_pin);

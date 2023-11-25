@@ -7,14 +7,12 @@
 ********************************************************************************/
 
 
-#ifndef MULTI_SPI2_H
-#define MULTI_SPI2_H
+#ifndef MULTI_SPI3_H
+#define MULTI_SPI3_H
 
 #include "stm32f4xx_hal.h"
-extern SPI_HandleTypeDef handle_spi2;
 
-void spi2_init(void);
-uint8_t spi2_transmit_receive_byte(uint8_t byte_data);
-uint8_t spi2_read_write_byte(uint8_t txdata);
+void spi3_init(void);
+uint8_t spi3_transmit_receive_byte(uint8_t byte_data);
 
-#endif //MULTI_SPI2_H
+#endif //MULTI_SPI3_H

@@ -27,7 +27,7 @@
 
 #define OLED_SPI_SOFT_SCL_GPIO GPIOB
 #define OLED_SPI_SOFT_SDA_GPIO GPIOB
-#define OLED_SPI_SOFT_SCL_PIN GPIO_PIN_13
+#define OLED_SPI_SOFT_SCL_PIN GPIO_PIN_10
 #define OLED_SPI_SOFT_SDA_PIN GPIO_PIN_15
 
 #define OLED_SPI_SOFT_SCL_RESET HAL_GPIO_WritePin(OLED_SPI_SOFT_SCL_GPIO, OLED_SPI_SOFT_SCL_PIN, GPIO_PIN_RESET)
@@ -90,6 +90,7 @@ void oled_wt_byte(uint8_t data, uint8_t cmd, uint8_t index);
 void oled_wt_byte_all(uint8_t data, uint8_t cmd);
 
 void oled_page_draw_point(uint8_t x, uint8_t y, uint8_t f);
+
 
 typedef struct {
     GPIO_TypeDef* gpio_port;

@@ -94,6 +94,8 @@ int main(void) {
     /* USER CODE BEGIN 2 */
     key_init_user();
     oled_init_user();
+    oled_show_user();
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -101,7 +103,6 @@ int main(void) {
     while (1) {
         key_scan_user();
         /* USER CODE END WHILE */
-        oled_show_user();
         /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */

@@ -37,26 +37,9 @@ void spi2_init(void) {
     // CRC 值计算的多项式
     handle_spi2.Init.CRCPolynomial = 10;
     // 根据指定参数初始化外设 SPIX 寄存器d
-    HAL_SPI_Init(&handle_spi2);
-}
-
-// SPI 底层初始化
-void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi) {
-    GPIO_InitTypeDef GPIO_InitStruct = {0};
-    if (hspi->Instance == SPI2) {
-        // 时钟使能
-        __HAL_RCC_SPI2_CLK_ENABLE();
-        __HAL_RCC_GPIOB_CLK_ENABLE();
-        /** SPI2 GPIO Configuration
-            PB13     ------> SPI2_SCK
-            PB14     ------> SPI2_MISO
-            PB15     ------> SPI2_MOSI
-        */
-        // 从机不发送信息则不配置 14
-        GPIO_InitStruct.Pin = GPIO_PIN_13 | GPIO_PIN_15;
-        GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-        GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+    if (HAL_SPI_Init(&handle_spi2) != HAL_OK)
+    {
+        printf("spi2 init error !");
     }
 }
 
@@ -64,7 +47,20 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi) {
 * SPI 发送并接受一个字节的数据
 ********************************************************************************/
 uint8_t spi2_transmit_receive_byte(uint8_t byte_data) {
+
     uint8_t receive_data;
     if (HAL_SPI_TransmitReceive(&handle_spi2, &byte_data, &receive_data, 1, 1000) != HAL_OK) return 0;
     return receive_data;
+}
+
+uint8_t spi2_read_write_byte(uint8_t txdata)
+{
+    uint8_t rxdata;
+
+    if (HAL_SPI_TransmitReceive(&handle_spi2, &txdata, &rxdata, 1, 1000) != HAL_OK)
+    {
+        return 0;
+    }
+
+    return rxdata;
 }
