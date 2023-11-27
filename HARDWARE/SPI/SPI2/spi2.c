@@ -47,7 +47,6 @@ void spi2_init(void) {
 * SPI 发送并接受一个字节的数据
 ********************************************************************************/
 uint8_t spi2_transmit_receive_byte(uint8_t byte_data) {
-
     uint8_t receive_data;
     if (HAL_SPI_TransmitReceive(&handle_spi2, &byte_data, &receive_data, 1, 1000) != HAL_OK) return 0;
     return receive_data;

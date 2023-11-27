@@ -1,0 +1,20 @@
+/********************************************************************************
+* @author: iLx1
+* @email: colorful_ilx1@163.com
+* @date: 2023/11/23 20:59
+* @version: 1.0
+* @description: 
+********************************************************************************/
+
+
+#ifndef MULTI_SPI1_H
+#define MULTI_SPI1_H
+
+#include "stm32f4xx_hal.h"
+
+void spi1_init(void);
+HAL_SPI_StateTypeDef spi1_transmit_data(uint8_t* byte_data, uint16_t size);
+HAL_SPI_StateTypeDef spi1_receive_data(uint8_t* receive_data, uint16_t size);
+uint8_t spi1_transmit_receive_byte(uint8_t transmit_byte);
+void spi1_set_speed(uint8_t speed);
+#endif //MULTI_SPI1_H
