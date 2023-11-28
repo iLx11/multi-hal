@@ -21,49 +21,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11e32a10-7d4b-4091-83ca-2dba6149e094" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/FLASH/flash.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/FLASH/flash.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/I2C/I2C1/i2c1.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/I2C/I2C1/i2c1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_96/oled_96.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_96/oled_96.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Flash/flash_user.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Flash/flash_user.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_42/oled_42.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_42/oled_42.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_42/oled_42.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_42/oled_42.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_91/oled_91.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_91/oled_91.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_91/oled_91.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_91/oled_91.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_test/oled_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_test/oled_test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/OLED/oled_test/oled_test.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/OLED/OLED_test/oled_test.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/SPI/SPI2/spi2.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI2/spi2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/SPI/SPI3/spi3.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI3/spi3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/FLASH/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/FLASH/flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/FLASH/flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/FLASH/flash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/SPI/SPI1/spi1.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/STM32F407ZGTX_FLASH.ld" beforeDir="false" afterPath="$PROJECT_DIR$/STM32F407ZGTX_FLASH.ld" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER/Oled/oled_user.c" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Oled/oled_user.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-92093d831bf004ecdad2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-25T06-32-50-0844.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-multi.elf-Debug-d46a41a64a9d0e1d5018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER/Flash/flash_user.c" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Flash/flash_user.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-27T13-56-14-0841.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/OLED/oled_42/oled_42.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/OLED/oled_91/oled_91.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/OLED/oled_test/oled_test.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/FLASH/flash.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/FLASH/flash.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI1/spi1.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI1/spi1.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI2/spi2.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI2/spi2.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI3/spi3.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/SPI/SPI3/spi3.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Oled/oled_user.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Oled/oled_user.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Flash/flash_user.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Flash/flash_user.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/multi.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/multi.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/multi.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/multi.elf" afterDir="false" />
@@ -133,17 +108,17 @@
       <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\Core\Src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\Drivers\STM32F4xx_HAL_Driver\Inc" />
       <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\Drivers\STM32F4xx_HAL_Driver\Src" />
+      <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\Drivers\STM32F4xx_HAL_Driver\Inc" />
       <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\HARDWARE\OLED" />
       <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\HARDWARE\SPI" />
       <recent name="D:\Users\Administrator\Desktop\HARDWARE\multi\Core\Inc" />
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.multi.elf">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="multi.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="multi" TARGET_NAME="multi.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="multi" RUN_TARGET_NAME="multi.elf">
@@ -180,7 +155,8 @@
       <workItem from="1700719816282" duration="31140000" />
       <workItem from="1700804294913" duration="4723000" />
       <workItem from="1700814676371" duration="82152000" />
-      <workItem from="1701014695264" duration="25969000" />
+      <workItem from="1701014695264" duration="56145000" />
+      <workItem from="1701174215144" duration="10402000" />
     </task>
     <servers />
   </component>

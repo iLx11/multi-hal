@@ -63,10 +63,12 @@ HAL_SPI_StateTypeDef spi1_receive_data(uint8_t* receive_data, uint16_t size) {
 ********************************************************************************/
 uint8_t spi1_transmit_receive_byte(uint8_t transmit_byte) {
     uint8_t receive_data;
-    HAL_SPI_TransmitReceive(&handle_spi1, &transmit_byte, &receive_data, 1, 1000);
+    HAL_SPI_TransmitReceive(&handle_spi1, &transmit_byte, &receive_data, 1, 100);
     return receive_data;
 }
-
+/********************************************************************************
+* 设置速率
+********************************************************************************/
 void spi1_set_speed(uint8_t speed) {
     assert_param(IS_SPI_BAUDRATE_PRESCALER(speed)); /* 判断有效性 */
     __HAL_SPI_DISABLE(&handle_spi1);             /* 关闭SPI */
