@@ -21,37 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11e32a10-7d4b-4091-83ca-2dba6149e094" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/FATFS/cc936.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/FATFS/integer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/TIM/TIM4/tim4.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HARDWARE/TIM/TIM4/tim4.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Encoder/encoder_user.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Encoder/encoder_user.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Fatfs/fatfs_user.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/USER/Fatfs/fatfs_user.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER2/encoder2.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER2/encoder2.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f4xx_hal_conf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/MATRIX_KEY/matrix_key.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/MATRIX_KEY/matrix_key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HARDWARE/MATRIX_KEY/matrix_key.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/MATRIX_KEY/matrix_key.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER/Flash/flash_user.c" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Flash/flash_user.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER/Flash/flash_user.h" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Flash/flash_user.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USER/Matrix_key/matrix_key_user.c" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Matrix_key/matrix_key_user.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-604d3a977c49f3dbea4e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-28T13-16-47-0934.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-multi.elf-Debug-f9a2abc7ea6cce1b07ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.h" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/ENCODER/ENCODER1/encoder1.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HARDWARE/TIM/TIM4/tim4.c" beforeDir="false" afterPath="$PROJECT_DIR$/HARDWARE/TIM/TIM4/tim4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USER/Encoder/encoder_user.c" beforeDir="false" afterPath="$PROJECT_DIR$/USER/Encoder/encoder_user.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/MATRIX_KEY/matrix_key.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/MATRIX_KEY/matrix_key.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Flash/flash_user.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Flash/flash_user.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Matrix_key/matrix_key_user.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Matrix_key/matrix_key_user.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/ENCODER/ENCODER1/encoder1.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/ENCODER/ENCODER1/encoder1.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/TIM/TIM4/tim4.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/HARDWARE/TIM/TIM4/tim4.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Encoder/encoder_user.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/multi.elf.dir/USER/Encoder/encoder_user.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/multi.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/multi.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/multi.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/multi.elf" afterDir="false" />
@@ -170,7 +152,7 @@
       <workItem from="1700814676371" duration="82152000" />
       <workItem from="1701014695264" duration="56145000" />
       <workItem from="1701174215144" duration="24309000" />
-      <workItem from="1701246744846" duration="19550000" />
+      <workItem from="1701246744846" duration="44078000" />
     </task>
     <servers />
   </component>

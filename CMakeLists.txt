@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.25)
 # specify cross-compilers and tools
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
+set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
 set(CMAKE_AR arm-none-eabi-ar)
 set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
 set(CMAKE_OBJDUMP arm-none-eabi-objdump)
@@ -49,7 +49,7 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(USER/Encoder HARDWARE/ENCODER/ENCODER1 HARDWARE/TIM/TIM4 USER/Fatfs HARDWARE/FATFS HARDWARE/SPI/SPI_TEST HARDWARE/FLASH_TEST USER/Flash HARDWARE/FLASH HARDWARE/SPI/SPI1 HARDWARE/OLED/OLED_96 HARDWARE/I2C/I2C1 HARDWARE/SPI/SPI3 HARDWARE/OLED/oled_42 HARDWARE/OLED/oled_test HARDWARE/SPI/SPI2 HARDWARE/OLED/oled_91 HARDWARE/MATRIX_KEY USER/Oled USER/Matrix_key Core/Inc USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include)
+include_directories(HARDWARE/ENCODER/ENCODER2 USER/Encoder HARDWARE/ENCODER/ENCODER1 HARDWARE/TIM/TIM4 USER/Fatfs HARDWARE/FATFS HARDWARE/SPI/SPI_TEST HARDWARE/FLASH_TEST USER/Flash HARDWARE/FLASH HARDWARE/SPI/SPI1 HARDWARE/OLED/OLED_96 HARDWARE/I2C/I2C1 HARDWARE/SPI/SPI3 HARDWARE/OLED/oled_42 HARDWARE/OLED/oled_test HARDWARE/SPI/SPI2 HARDWARE/OLED/oled_91 HARDWARE/MATRIX_KEY USER/Oled USER/Matrix_key Core/Inc USB_DEVICE/App USB_DEVICE/Target Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy Middlewares/ST/STM32_USB_Device_Library/Core/Inc Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx)
 
