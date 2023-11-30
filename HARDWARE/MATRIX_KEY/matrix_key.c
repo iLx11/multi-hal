@@ -8,20 +8,8 @@
 
 
 #include "matrix_key.h"
-#include "stm32f4xx_hal.h"
 
 uint16_t key_state = STATE;
-
-static void set_row_low(uint8_t row);
-
-// 获取列的状态
-static uint8_t get_col_state(uint8_t col);
-
-// 外部重写按键的回调函数
-extern void key_down_callback(uint8_t row, uint8_t col);
-extern void key_up_callback(uint8_t row, uint8_t col);
-extern void key_hold_callback(uint8_t row, uint8_t col);
-static void key_hold_check(uint8_t row, uint8_t col);
 
 /********************************************************************************
 * 判断键盘抬起和放下

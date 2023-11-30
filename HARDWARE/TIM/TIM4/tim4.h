@@ -1,18 +1,21 @@
 /********************************************************************************
 * @author: iLx1
 * @email: colorful_ilx1@163.com
-* @date: 2023/11/26 14:27
+* @date: 2023/11/30 0:04
 * @version: 1.0
 * @description: 
 ********************************************************************************/
 
 
-#ifndef MULTI_FLASH_USER_H
-#define MULTI_FLASH_USER_H
+#ifndef MULTI_TIM4_H
+#define MULTI_TIM4_H
 
-// ×î´ó FLASH SIZE
-#define MAX_FLASH_SIZE (16 * 1024 * 1024);
+#include "stm32f4xx_hal.h"
+#include <stdio.h>
 
-void flash_init_user(void);
+void tim4_init(void);
 
-#endif //MULTI_FLASH_USER_H
+uint32_t get_encoder_counter(void);
+void set_encoder_counter(uint8_t set_value);
+
+#endif //MULTI_TIM4_H

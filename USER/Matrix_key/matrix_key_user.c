@@ -51,9 +51,9 @@ void key_up_callback(uint8_t row, uint8_t col) {
 /********************************************************************************
 * 键盘按住回调
 ********************************************************************************/
-void key_hold_callback(uint8_t row, uint8_t col) {
-
-}
+//void key_hold_callback(uint8_t row, uint8_t col) {
+//
+//}
 
 //void send_hid_buff() {
 //    while (USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS, key_buff, 8) != USBD_OK);

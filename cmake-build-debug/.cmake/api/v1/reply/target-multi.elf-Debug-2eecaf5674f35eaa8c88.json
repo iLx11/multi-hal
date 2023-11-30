@@ -154,6 +154,26 @@
 			[
 				{
 					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/USER/Encoder"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/ENCODER/ENCODER1"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/TIM/TIM4"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/USER/Fatfs"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/FATFS"
+				},
+				{
+					"backtrace" : 10,
 					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/SPI/SPI_TEST"
 				},
 				{
@@ -292,26 +312,33 @@
 				97,
 				98,
 				100,
-				102,
-				104,
-				106,
-				108,
-				110,
-				112,
-				114,
-				116,
-				118,
+				101,
+				103,
+				107,
+				109,
+				111,
+				113,
+				115,
+				117,
+				119,
 				121,
-				126,
+				123,
+				125,
 				127,
-				128,
-				130,
+				129,
 				132,
-				134,
-				136,
+				137,
 				138,
-				140,
-				142
+				139,
+				141,
+				143,
+				145,
+				147,
+				149,
+				151,
+				153,
+				155,
+				157
 			]
 		},
 		{
@@ -382,6 +409,26 @@
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/USER/Encoder"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/ENCODER/ENCODER1"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/TIM/TIM4"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/USER/Fatfs"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/FATFS"
+				},
 				{
 					"backtrace" : 10,
 					"path" : "D:/Users/Administrator/Desktop/HARDWARE/multi/HARDWARE/SPI/SPI_TEST"
@@ -610,28 +657,36 @@
 				74,
 				75,
 				99,
-				101,
-				103,
+				102,
+				104,
 				105,
-				107,
-				109,
-				111,
-				113,
-				115,
-				117,
-				119,
+				106,
+				108,
+				110,
+				112,
+				114,
+				116,
+				118,
 				120,
 				122,
-				123,
 				124,
-				125,
+				126,
+				128,
+				130,
 				131,
 				133,
+				134,
 				135,
-				137,
-				139,
-				141,
-				143
+				136,
+				142,
+				144,
+				146,
+				148,
+				150,
+				152,
+				154,
+				156,
+				158
 			]
 		},
 		{
@@ -670,26 +725,33 @@
 				97,
 				98,
 				100,
-				102,
-				104,
-				106,
-				108,
-				110,
-				112,
-				114,
-				116,
-				118,
+				101,
+				103,
+				107,
+				109,
+				111,
+				113,
+				115,
+				117,
+				119,
 				121,
-				126,
+				123,
+				125,
 				127,
-				128,
-				130,
+				129,
 				132,
-				134,
-				136,
+				137,
 				138,
-				140,
-				142
+				139,
+				141,
+				143,
+				145,
+				147,
+				149,
+				151,
+				153,
+				155,
+				157
 			]
 		},
 		{
@@ -700,8 +762,8 @@
 				19,
 				41,
 				76,
-				129,
-				144
+				140,
+				159
 			]
 		}
 	],
@@ -1231,6 +1293,55 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "HARDWARE/ENCODER/ENCODER1/encoder1.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/ENCODER/ENCODER1/encoder1.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HARDWARE/FATFS/cc936.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HARDWARE/FATFS/diskio.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/FATFS/diskio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HARDWARE/FATFS/ff.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/FATFS/ff.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/FATFS/ffconf.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/FATFS/integer.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "HARDWARE/FLASH/flash.c",
 			"sourceGroupIndex" : 1
 		},
@@ -1351,6 +1462,17 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HARDWARE/TIM/TIM4/tim4.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HARDWARE/TIM/TIM4/tim4.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc/usbd_customhid.h",
 			"sourceGroupIndex" : 0
 		},
@@ -1445,6 +1567,28 @@
 		{
 			"backtrace" : 1,
 			"path" : "USB_DEVICE/Target/usbd_conf.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "USER/Encoder/encoder_user.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "USER/Encoder/encoder_user.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "USER/Fatfs/fatfs_user.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "USER/Fatfs/fatfs_user.h",
 			"sourceGroupIndex" : 0
 		},
 		{

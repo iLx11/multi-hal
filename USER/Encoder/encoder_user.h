@@ -1,18 +1,15 @@
 /********************************************************************************
 * @author: iLx1
 * @email: colorful_ilx1@163.com
-* @date: 2023/11/26 14:27
+* @date: 2023/11/30 8:25
 * @version: 1.0
 * @description: 
 ********************************************************************************/
 
 
-#ifndef MULTI_FLASH_USER_H
-#define MULTI_FLASH_USER_H
+#ifndef MULTI_ENCODER_USER_H
+#define MULTI_ENCODER_USER_H
 
-// ×î´ó FLASH SIZE
-#define MAX_FLASH_SIZE (16 * 1024 * 1024);
-
-void flash_init_user(void);
-
-#endif //MULTI_FLASH_USER_H
+void encoder_init_user(void);
+void encoder_scan_user(void);
+#endif //MULTI_ENCODER_USER_H

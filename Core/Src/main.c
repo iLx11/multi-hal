@@ -28,7 +28,8 @@
 #include "matrix_key_user.h"
 #include "oled_user.h"
 #include "flash_user.h"
-
+#include "fatfs_user.h"
+#include "encoder_user.h"
 
 /* USER CODE END Includes */
 
@@ -97,15 +98,21 @@ int main(void) {
     key_init_user();
     /*oled_init_user();
     oled_show_user();*/
-    flash_init_user();
+//    flash_init_user();
+//    fatfs_init_user();
+    encoder_init_user();
+
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
         key_scan_user();
+        encoder_scan_user();
         /* USER CODE END WHILE */
-
+//        printf("the_encode_is -> %d\r\n", get_encoder_counter());
+//        HAL_Delay(200);
         /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */
