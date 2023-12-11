@@ -16,7 +16,7 @@
 
 void fatfs_init_user(void);
 // 文件系统挂载
-static void file_sys_mount(void);
+static FRESULT file_sys_mount(FATFS* fs_obj, const char* fs_path, uint8_t dev_index);
 // 文件写入
 static FRESULT file_sys_write(FIL* fil, void* write_buff, uint32_t num_to_write);
 // 文件读取

@@ -26,11 +26,12 @@
 /* USER CODE BEGIN Includes */
 #include "retarget.h"
 #include "matrix_key_user.h"
+//#include "sdio_user.h"
+// #include "fatfs_user.h"
+#include "encoder_user.h"
 #include "oled_user.h"
 #include "flash_user.h"
-#include "fatfs_user.h"
-#include "encoder_user.h"
-
+#include "lcd_user.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,12 +97,13 @@ int main(void) {
     MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
     key_init_user();
-    /*oled_init_user();
-    oled_show_user();*/
+    lcd_init_user();
+    oled_init_user();
+    oled_show_user();
 //    flash_init_user();
 //    fatfs_init_user();
     encoder_init_user();
-
+//    sdio_init_user();
 
     /* USER CODE END 2 */
 

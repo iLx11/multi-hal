@@ -54,3 +54,18 @@ void encoder2_hold_a_callback(void) {
     printf("按下逆时针\r\n");
 }
 
+void encoder1_clockwise_callback(void) {
+    printf("顺时针\r\n");
+}
+
+void encoder1_anticlockwise_callback(void) {
+    printf("逆时针\r\n");
+}
+
+void encoder1_hold_c_callback(void) {
+    printf("按下顺时针\r\n");
+}
+
+void encoder1_hold_a_callback(void) {
+    printf("按下逆时针\r\n");
+}

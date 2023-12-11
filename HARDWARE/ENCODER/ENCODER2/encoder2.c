@@ -15,13 +15,15 @@ uint8_t encoder_direction = 0;
 
 void encoder2_init(void) {
     GPIO_InitTypeDef GPIO_InitStruct;
-    ENABLE_ENCODER2_RCC;
+    ENABLE_ENCODER2_KEY_RCC;
 
     GPIO_InitStruct.Pin = ENCODER2_KEY_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     HAL_GPIO_Init(ENCODER2_KEY_GPIO, &GPIO_InitStruct);
+
+    ENABLE_ENCODER2_RCC;
 
     GPIO_InitStruct.Pin = ENCODER2_A_PIN | ENCODER2_B_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;

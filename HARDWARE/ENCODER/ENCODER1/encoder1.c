@@ -18,7 +18,7 @@ void encoder1_init(void) {
     tim4_init();
 
     GPIO_InitTypeDef GPIO_InitStruct;
-    ENABLE_ENCODER2_KEY_RCC;
+    ENABLE_ENCODER1_KEY_RCC;
 
     GPIO_InitStruct.Pin = ENCODER1_KEY_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;

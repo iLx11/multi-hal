@@ -29,11 +29,11 @@ void oled_91_init(void) {
     __HAL_RCC_GPIOB_CLK_ENABLE();
 
     //GPIO初始化设置
-    GPIO_InitStruct.Pin = GPIO_PIN_10 | GPIO_PIN_15;
+    GPIO_InitStruct.Pin = OLED_91_SPI_SOFT_SCL_PIN | OLED_91_SPI_SOFT_SDA_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     GPIO_InitStruct.Pull = GPIO_PULLUP;//上拉
-    HAL_GPIO_Init( GPIOB,&GPIO_InitStruct);//初始化
+    HAL_GPIO_Init( OLED_91_SPI_SOFT_SCL_GPIO,&GPIO_InitStruct);//初始化
 #else
     // spi2 初始化
     spi2_init();
@@ -145,14 +145,14 @@ void oled_wt_byte(uint8_t data, uint8_t cmd, uint8_t index) {
 #if SOFT_SPI
     for(uint8_t i = 0; i < 8; i ++) {
         // 拉低时钟
-        OLED_SPI_SOFT_SCL_RESET;
+        OLED_91_SPI_SOFT_SCL_RESET;
         // 判断数据
         if(data & 0x80)
-            OLED_SPI_SOFT_SDA_SET;
+            OLED_91_SPI_SOFT_SDA_SET;
         else
-            OLED_SPI_SOFT_SDA_RESET;
+            OLED_91_SPI_SOFT_SDA_RESET;
         // 拉高时钟
-        OLED_SPI_SOFT_SCL_SET;
+        OLED_91_SPI_SOFT_SCL_SET;
         // 数据移到下一位
         data <<= 1;
     }
