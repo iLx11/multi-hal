@@ -32,6 +32,9 @@
 #include "oled_user.h"
 #include "flash_user.h"
 #include "lcd_user.h"
+//#include "FreeRTOSConfig.h"
+#include "FreeRTOS.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,12 +60,68 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
+void led1_task(void* arg);
+void led2_task(void* arg);
 
+// 创建任务句柄
+// 统一任务管理
+static TaskHandle_t app_task_handle = NULL;
+// 其他任务
+static TaskHandle_t led1_task_handle = NULL;
+static TaskHandle_t led2_task_handle = NULL;
+
+static void app_task_create(void) {
+    BaseType_t x_return = pdPASS;
+    x_return = xTaskCreate((TaskFunction_t )led1_task, /* 任务入口函数 */
+                           (const char* )"LED1_Task",/* 任务名字 */
+                           (uint16_t )512, /* 任务栈大小 */
+                           (void* )NULL, /* 任务入口函数参数 */
+                           (UBaseType_t )2, /* 任务的优先级 */
+                           (TaskHandle_t* )&led1_task_handle);
+    if(pdPASS == x_return) {
+        printf("led task ok\r\n");
+    }
+    vTaskDelete(app_task_handle);
+    taskEXIT_CRITICAL(); //退出临界区
+}
+
+
+/* USER CODE BEGIN PFP */
+void led_init(void) {
+    __HAL_RCC_GPIOF_CLK_ENABLE();
+
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+
+    GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void led1_task(void* arg)
+{
+    while(1)
+    {
+        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_9, GPIO_PIN_SET);
+        HAL_Delay(300);
+        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_9, GPIO_PIN_RESET);
+        HAL_Delay(300);
+    }
+}
+
+void led2_task(void* arg)
+{
+    while(1)
+    {
+        HAL_GPIO_TogglePin(GPIOF, GPIO_PIN_10);
+//        vTaskDelay(300);
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -95,29 +154,52 @@ int main(void) {
     MX_GPIO_Init();
     MX_USB_DEVICE_Init();
     MX_USART1_UART_Init();
+
     /* USER CODE BEGIN 2 */
-    key_init_user();
-    lcd_init_user();
-    oled_init_user();
-    oled_show_user();
+
+//    key_init_user();
+//    lcd_init_user();
+//    oled_init_user();
+//    oled_show_user();
 //    flash_init_user();
 //    fatfs_init_user();
-    encoder_init_user();
+//    encoder_init_user();
 //    sdio_init_user();
 
+    led_init();
+    BaseType_t xReturn = pdPASS;
+    xReturn = xTaskCreate((TaskFunction_t ) app_task_create, /* 任务入口函数 */
+                          (const char* )"create_test",/* 任务名字 */
+                          (uint16_t )512, /* 任务栈大小 */
+                          (void* )NULL,/* 任务入口函数参数 */
+                          (UBaseType_t )1, /* 任务的优先级 */
+                          (TaskHandle_t* )&app_task_handle);/* 任务控制块指针 */
+    if(pdPASS == xReturn) {
+        vTaskStartScheduler();
+    } else {
+        printf("test fail\r\n");
+        return -1;
+    }
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1) {
-        key_scan_user();
-        encoder_scan_user();
+//        HAL_Delay(200);
+//        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_SET);
+//        HAL_Delay(200);
+//        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_RESET);
+//        HAL_Delay(200);
+//        vTaskDelay(300);
+
+//        printf("234234234");
+//        key_scan_user();
+//        encoder_scan_user();
         /* USER CODE END WHILE */
 //        printf("the_encode_is -> %d\r\n", get_encoder_counter());
 //        HAL_Delay(200);
         /* USER CODE BEGIN 3 */
     }
-    /* USER CODE END 3 */
 }
 
 /**
@@ -163,7 +245,13 @@ void SystemClock_Config(void) {
 }
 
 /* USER CODE BEGIN 4 */
-
+// 时钟源重定向
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//    if (htim->Instance == TIM4) {
+//        HAL_IncTick();
+//    }
+//}
 /* USER CODE END 4 */
 
 /**

@@ -59,7 +59,7 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle) {
 ********************************************************************************/
 uint8_t i2c1_transmit_byte(uint16_t address, uint8_t* data, uint8_t size) {
     if(HAL_I2C_Master_Transmit(&hi2c1, address, data, size, HAL_MAX_DELAY) != HAL_OK) {
-        printf("address -> %x\r\n", address);
+//        printf("address -> %x\r\n", address);
         return 0;
     }
     return 1;
